@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'application'  // If you're running an application, optional
+}
+
+group = 'com.yourcompany'  // Change to your desired group
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '11'  // Adjust based on the Java version you're using
+targetCompatibility = '11'
+
+repositories {
+    mavenCentral()  // Use Maven Central repository to fetch dependencies
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'  // Optional, depending on your needs
+
+    // JUnit 5 dependencies for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
+
+    // Other dependencies for your project
+    // implementation 'your.other.dependencies'
+}
+
+test {
+    useJUnitPlatform()  // Required to use JUnit 5
+
+    // Optional: This defines the pattern to look for test classes and methods
+    include '**/ZooAppTest*'
+}
+
+application {
+    // Main class of your application, if needed (optional)
+    mainClassName = 'com.yourcompany.ZooApp'  // Change this to your main class if applicable
+}

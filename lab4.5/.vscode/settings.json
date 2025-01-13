@@ -1,0 +1,9 @@
+{
+        "java.test.config": {
+            "name": "ZooAppTests",
+            "workingDirectory": "${workspaceFolder}"
+        },
+        "java.testClass": "ZooAppTest",
+        "java.testMethod": "testAddLion"
+}
+    
